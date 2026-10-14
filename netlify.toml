@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-page app: send every route to index.html so refreshing
+# /user/dashboard (or any other page) doesn't show "Page not found".
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
